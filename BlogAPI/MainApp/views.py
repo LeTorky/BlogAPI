@@ -17,13 +17,14 @@ environ.Env.read_env()
 SECRET_KEY = env('SECRET_KEY')
 
 class AuthorViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Post.objects.all()
+    queryset = Author.objects.all()
     serializer_class = AuthorSerializer
     permission_classes = [AllowAny]
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    permission_classes = [PostsPermission]
     
     @action(detail=False, methods=['get'], url_path=r'byAuthor/(?P<pk>[0-9]+)', permission_classes=[AllowAny])
     def get_blogs_by_author(self, request, pk):
@@ -35,8 +36,9 @@ class PostViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [UserPermission]
 
-    @action(detail=False, permission_classes=[AllowAny])
+    @action(detail=False)
     def login(self, request):
         user = self.serializer_class(data=request.data)
         user.is_valid()
