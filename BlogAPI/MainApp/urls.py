@@ -8,4 +8,11 @@ default_router.register(r'posts', PostViewSet, basename='posts')
 
 urlpatterns = [
     path('', include(default_router.urls)),
+    path('users/', UserViewSet.as_view({
+        'post': 'create',
+        'put': 'update',
+    })),
+    path('users/login/', UserViewSet.as_view({
+        'post': 'login',
+    }))
 ]

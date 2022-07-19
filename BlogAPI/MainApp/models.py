@@ -16,3 +16,16 @@ class Post(models.Model):
     creation_date = models.DateField(auto_now_add=True)
     def __str__(self):
         return self.title
+
+class UserAuthorDTO(User):
+    @property
+    def name(self):
+        return self.author.name
+    @name.setter
+    def name(self, value):
+        self.save()
+        Author(name = value, user = self).save()
+    class Meta:
+        proxy = True
+    def __str__(self):
+        return self.username
