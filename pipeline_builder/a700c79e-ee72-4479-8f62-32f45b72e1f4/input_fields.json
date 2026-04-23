@@ -1,0 +1,15 @@
+[
+  {
+    "field_type": "input_string",
+    "default_value": "string",
+    "field_key": "string",
+    "field_title": "string",
+    "data_type": "integer",
+    "required": true,
+    "hidden": true,
+    "meta_data": {
+      "additionalProp1": {}
+    },
+    "order": 0
+  }
+]
