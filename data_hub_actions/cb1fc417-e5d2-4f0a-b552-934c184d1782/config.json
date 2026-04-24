@@ -1,1 +1,0 @@
-{"action_type": "on_render", "data_hub_entry_var_name": "data_hub_entry", "payload_var_name": "payload", "fields": [{"field_type": "input_string", "default_value": null, "field_key": "param", "data_type": "string", "meta_data": null, "order": 0}]}
