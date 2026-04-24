@@ -1,1 +1,1 @@
-return {'result': 'original'}
+return {'result': 'updated', 'count': 42}
