@@ -1,1 +1,1 @@
-{"data_hub_entry_var_name": "data_hub_entry", "payload_var_name": "payload", "input_schema": null, "output_schema": null}
+{"data_hub_entry_var_name": "entry", "payload_var_name": "input_data", "input_schema": null, "output_schema": null}
