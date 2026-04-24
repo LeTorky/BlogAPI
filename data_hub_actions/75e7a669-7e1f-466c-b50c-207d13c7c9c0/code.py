@@ -1,1 +1,1 @@
-return {'status': 'ok'}
+return {'updated': True}
