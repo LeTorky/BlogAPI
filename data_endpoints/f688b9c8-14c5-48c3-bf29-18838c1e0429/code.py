@@ -1,0 +1,1 @@
+return {'result': 'to_delete_perm'}
