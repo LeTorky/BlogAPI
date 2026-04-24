@@ -1,1 +1,0 @@
-return {'result': 'updated', 'count': 42}
